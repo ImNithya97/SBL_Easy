@@ -22,7 +22,7 @@ Open the website and search by year
 #------------------------------create the year list  and get the count-------------------------------------------#
     ${count}=   Get Element Count                                           //*[@class="daterow"]//*[@id="yearofdeath"]/option
     @{type_list}=    Create List
-    FOR    ${i}    IN RANGE    1            2 
+    FOR    ${i}    IN RANGE    1            3 
         ${year_list}  Get Value                                           //*[@id="yearofdeath"]/option[${i+1}]
         Append To List    ${type_list}    ${year_list}   
     END
