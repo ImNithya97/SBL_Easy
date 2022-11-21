@@ -22,7 +22,7 @@ Open the website and search by year
 #------------------------------create the year list  and get the count-------------------------------------------#
     ${count}=   Get Element Count                                           //*[@class="daterow"]//*[@id="yearofdeath"]/option
     @{type_list}=    Create List
-    FOR    ${i}    IN RANGE    1            ${count} 
+    FOR    ${i}    IN RANGE    1            2 
         ${year_list}  Get Value                                           //*[@id="yearofdeath"]/option[${i+1}]
         Append To List    ${type_list}    ${year_list}   
     END
@@ -77,7 +77,7 @@ Navigate through search results and write to excel
     #    ${header_list}    Create List     Era    Surname    Forename    Rank    Service Number    Decoration    Place of Birth    Place of Death    Theatre of Death    Cause of Death    SNWM Roll    Unit Name    Other Detail    Record Url
     #    ${table}=       Create Table  columns=${header_list} 
         #---------------------------------------------------------------------------------------------------------------------
-        FOR    ${j}    IN RANGE    0     ${count_1}     1
+        FOR    ${j}    IN RANGE    0     5     1
             log     //*[@id="rhs"]/div[3]/div/table/tbody/tr[${j+1}]
             #-----------------check the pop_up msg present in the toolbar------------------------------#
             Run Keyword And Continue On Failure     Click Element If Visible      //*[@id="cookiebar"]/a[2]
@@ -141,7 +141,7 @@ Navigate through pages
     Run Keyword And Continue On Failure     Click Element If Visible      //*[@id="cookiebar"]/a[2]
     ${count_2}       Get Element Count        //p/strong[contains(text(),"Page:")]/following-sibling::a
     log     ${count_2}
-    FOR    ${k}    IN RANGE    1     ${count_2}     1
+    FOR    ${k}    IN RANGE    1     1     1
         
         Wait Until Keyword Succeeds    2x   2s    Click Element When Visible           //p/strong[contains(text(),"Page:")]/following-sibling::a[${k}]
         Navigate through search results and write to excel
