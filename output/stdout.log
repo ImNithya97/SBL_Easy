@@ -1,0 +1,20 @@
+==============================================================================
+Task1                                                                         
+==============================================================================
+Run Task                                                              | FAIL |
+Several failures occurred:
+
+1) NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+
+
+2) NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+------------------------------------------------------------------------------
+Task1                                                                 | FAIL |
+1 task, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\Q0038\Documents\Robots\WebCrawlingPoc\output\output.xml
+Log:     C:\Users\Q0038\Documents\Robots\WebCrawlingPoc\output\log.html
