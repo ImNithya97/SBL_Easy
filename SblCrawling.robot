@@ -42,7 +42,7 @@ Open the website and search by year
              #------------------------------------create the month list and get the count----------------------------------------------------#      
             ${count_3}=       Get Element Count                                           //*[@class="daterow"]//*[@id="monthofdeath"]/option
             @{data_list}=    Create List
-            FOR    ${x}    IN RANGE     1           ${count_3}
+            FOR    ${x}    IN RANGE     9          ${count_3}
                 ${month_list}  Get Value                                           //*[@class="daterow"]//*[@id="monthofdeath"]/option[${x+1}] 
                 Append To List    ${data_list}    ${year_list}  
                 Wait Until Keyword Succeeds    15x   2s   Click Element When Visible 	 //*[@id="monthofdeath"]
